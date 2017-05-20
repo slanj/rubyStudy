@@ -5,7 +5,7 @@ puts "Сколько накосил?"
 year = gets.chomp
 toyear = year.to_i
 
-puts "Отстока коси: #{toyear}"
+puts "Покоси: #{toyear}"
 
 if pokos == "покос"
     puts "Правильный покос!"
