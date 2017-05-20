@@ -3,7 +3,7 @@ y = 20
 z = x + y
 puts z
 a = "Hello"
-b = "World" 
+b = "World"
 c = a + b
 puts c
 
