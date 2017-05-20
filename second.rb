@@ -13,5 +13,4 @@ else
     puts "Неправильный покос"
 end
 
-
 puts "#{pokos} коси!"
