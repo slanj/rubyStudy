@@ -9,7 +9,7 @@ b = "World"
 c = a + b
 puts c
 
-x = 10.3
-y = 44.6
+x = 10.4
+y = 44.7
 z = x + y
 print z
