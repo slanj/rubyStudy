@@ -6,9 +6,11 @@ end
 
 class Student
   attr_accessor :first_name, :last_name, :primary_phone_number
+
   def introduction(target)
     puts "Aloha, #{target}, ya studenteg #{first_name}"
   end
+
   def favorite_number
     42
   end
@@ -33,7 +35,6 @@ frank.introduction("Petya")
 puts "#{frank.first_name} knows what is #{frank.favorite_number}"
 
 s = Sample.new
-
 5.times {s.hello}
 
 3.times do |i|
