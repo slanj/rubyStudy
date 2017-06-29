@@ -4,6 +4,16 @@ class Sample
   end
 end
 
+class Student
+  attr_accessor :first_name, :last_name, :primary_phone_number
+  def introduction(target)
+    puts "Aloha, #{target}, ya studenteg #{first_name}"
+  end
+  def favorite_number
+    42
+  end
+end
+
 def water_status(minutes)
   if minutes < 7
     puts "The water is not boiling yet."
@@ -15,6 +25,12 @@ def water_status(minutes)
     puts "Hot! Hot! Hot!"
   end
 end
+
+frank = Student.new
+frank.first_name = 'Frank'
+frank.introduction("Petya")
+
+puts "#{frank.first_name} knows what is #{frank.favorite_number}"
 
 s = Sample.new
 
