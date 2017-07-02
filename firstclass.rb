@@ -41,4 +41,4 @@ s = Sample.new
   puts "#{i}: Hello, World!"
 end
 
-puts water_status(9)
+water_status(9)
