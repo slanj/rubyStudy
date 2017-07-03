@@ -8,7 +8,7 @@ class Student
   attr_accessor :first_name, :last_name, :primary_phone_number
 
   def introduction(target)
-    puts "Aloha, #{target}, ya studenteg #{first_name}"
+    puts "Aloha, #{target}, ya student #{first_name}"
   end
 
   def favorite_number
