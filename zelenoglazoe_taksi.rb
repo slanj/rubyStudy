@@ -11,3 +11,7 @@ end
 def ogni(ogon='яркие')
   puts "Зажигаются #{ogon.encode('UTF-8')} огни"
 end
+
+def pritormozi
+  puts 'Притормози, притормози!'
+end
