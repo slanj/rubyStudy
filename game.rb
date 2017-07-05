@@ -22,7 +22,7 @@ while num_guesses < 10 && guess == 0
   num_guesses += 1
   if chislo == zagadka
     guess = 1
-    puts 'Угадал! Число:' + zagadka.to_s
+    puts 'Угадал! Число:' + zagadka.to_s + " за #{num_guesses} попыток"
   elsif chislo > zagadka
     puts 'Слишком большое число'
   elsif chislo < zagadka
