@@ -1,4 +1,10 @@
 class Cat
+  attr_reader :name
+
+  def name=(imya)
+    @name = imya
+  end
+
   def talk
     r = rand(5)
     if r.zero?
@@ -12,14 +18,6 @@ class Cat
     elsif r == 4
       puts 'Возьми на руки котика!'
     end
-  end
-
-  def name=(imya)
-    @name = imya
-  end
-
-  def name
-    @name
   end
 
   def sayname
