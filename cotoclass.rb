@@ -14,10 +14,24 @@ class Cat
     end
   end
 
+  def name=(imya)
+    @name = imya
+  end
+
+  def name
+    @name
+  end
+
+  def sayname
+    puts "Я - #{@name}!"
+  end
+
   def polezhat(mesto)
     puts "Иду лежать на #{mesto}"
   end
 end
 
 skvo = Cat.new
+skvo.name = 'Скво'
+skvo.sayname
 skvo.talk
