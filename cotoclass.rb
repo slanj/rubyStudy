@@ -1,5 +1,6 @@
 class Cat
   attr_reader :name
+  attr_accessor :obnimashki
 
   def name=(imya)
     @name = imya
@@ -31,5 +32,6 @@ end
 
 skvo = Cat.new
 skvo.name = 'Скво'
+skvo.obnimashki = 5
 skvo.sayname
 skvo.talk
