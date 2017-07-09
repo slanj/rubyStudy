@@ -8,8 +8,8 @@ def zvuk
   puts 'Оо-оо, зеленоглазое такси!'
 end
 
-def ogni(ogon='яркие')
-  puts "Зажигаются #{ogon.encode('UTF-8')} огни"
+def ogni(ogni='яркие')
+  puts "Зажигаются #{ogni.encode('UTF-8')} огни"
 end
 
 def pritormozi
