@@ -1,52 +1,44 @@
-movies = {
-  Memento: 3,
-  Primer: 4,
-  Ishtar: 1
-}
+movies = { Jumanji: 42,  The_Fisher_king: 100500}
 
-puts "What would you like to do?"
-puts "-- Type 'add' to add a movie."
-puts "-- Type 'update' to update a movie."
-puts "-- Type 'display' to display all movies."
-puts "-- Type 'delete' to delete a movie."
+puts 'What do you want from me?'
+choice = gets.chomp
 
-choice = gets.chomp.downcase
 case choice
-when 'add'
-  puts "What movie do you want to add?"
-  title = gets.chomp
-  if movies[title.to_sym].nil?
-    puts "What's the rating? (Type a number 0 to 4.)"
-    rating = gets.chomp
-    movies[title.to_sym] = rating.to_i
-    puts "#{title} has been added with a rating of #{rating}."
+  when 'add'
+  	puts 'Enter movie title'
+  	title = gets.chomp.to_sym
+  	puts 'Enter movie rating'
+  	rating = gets.chomp.to_i
+  	if movies[title].nil?
+  		movies[title] = rating
+  		puts "Movie #{title} was added with rating #{rating}"
+    else
+    	puts "This movie already exists with rating #{movies[title]}"
+    end
+  when 'update'
+  	puts 'Enter movie title'
+  	title = gets.chomp.to_sym
+    if movies[title].nil?
+      puts "There is no movie #{title} in database"
+    else
+      puts "Movie found. Enter new rating"
+      rating = gets.chomp.to_i
+      movies[title] = rating
+      puts "Movie #{title} was updated with rating #{movies[title]}"
+    end
+  when 'display'
+  	movies.each do |movie, rating|
+      puts movie.to_s + ": " + rating.to_s
+    end
+  when 'delete'
+  	puts 'Enter movie you want to delete'
+    title = gets.chomp.to_sym
+  	if movies[title].nil?
+      puts "There is no such movie"
+    else
+      movies.delete(title)
+      puts "Movie #{title} was deleted"
+    end
   else
-    puts "That movie already exists! Its rating is #{movies[title.to_sym]}."
-  end
-when 'update'
-  puts "What movie do you want to update?"
-  title = gets.chomp
-  if movies[title.to_sym].nil?
-    puts "Movie not found!"
-  else
-    puts "What's the new rating? (Type a number 0 to 4.)"
-    rating = gets.chomp
-    movies[title.to_sym] = rating.to_i
-    puts "#{title} has been updated with new rating of #{rating}."
-  end
-when 'display'
-  movies.each do |movie, rating|
-    puts "#{movie}: #{rating}"
-  end
-when 'delete'
-  puts "What movie do you want to delete?"
-  title = gets.chomp
-  if movies[title.to_sym].nil?
-    puts "Movie not found!"
-  else
-    movies.delete(title.to_sym)
-    puts "#{title} has been removed."
-  end
-else
-  puts "Sorry, I didn't understand you."
+  	puts 'Error!'
 end
