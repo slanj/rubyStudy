@@ -16,10 +16,6 @@ class Cat < Animal
     end
   end
 
-  def sayname
-    puts "Я - #{@name}, мне #{@age} годиков!"
-  end
-
   def polezhat(mesto)
     puts "Иду лежать на #{mesto}"
   end
@@ -28,5 +24,5 @@ end
 skvo = Cat.new
 skvo.name = 'Скво'
 skvo.age = 7
-skvo.sayname
+puts skvo
 skvo.talk

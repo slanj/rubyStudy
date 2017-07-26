@@ -16,4 +16,9 @@ class Animal
 
     @age = years
   end
+
+
+  def to_s
+    "Я - #{@name}, мне #{@age} годиков!"
+  end
 end
