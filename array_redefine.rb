@@ -11,3 +11,9 @@ end
 
 a = [1, 2, 3]
 a.each { |item| puts item }
+
+def a.introduce
+  puts 'I am so unique array'
+end
+
+a.introduce
