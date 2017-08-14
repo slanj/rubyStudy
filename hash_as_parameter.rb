@@ -1,19 +1,18 @@
 class Candidate
   attr_accessor :name, :age, :occupation, :hobby, :birthplace
 
-  def initialize(name, options={})
+  def initialize(name, age:, occupation:, hobby: nill, birthplace: 'Kennigsberg')
     self.name = name
-    self.age = options[:age]
-    self.occupation = options[:occupation]
-    self.hobby = options[:hobby]
-    self.birthplace = options[:birthplace]
+    self.age = age
+    self.occupation = occupation
+    self.hobby = hobby
+    self.birthplace = birthplace
   end
 end
 
 petro = Candidate.new("Petro Ivanovich",
                       age: 99,
                       occupation: 'Berlin',
-                      hobby: 'Raketostroenie',
-                      birthplace: "Kennigsberg")
+                      hobby: 'Raketostroenie')
 
 p petro
