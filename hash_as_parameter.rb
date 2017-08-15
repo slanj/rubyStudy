@@ -7,6 +7,7 @@ class Candidate
     self.occupation = occupation
     self.hobby = hobby
     self.birthplace = birthplace
+    puts age.class
   end
 end
 
