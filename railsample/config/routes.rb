@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :hotels
+  resources :stories
   get 'welcome/index'
   
   root 'welcome#index'               
