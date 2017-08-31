@@ -4,4 +4,11 @@ class PagesController < ApplicationController
 
   def contact
   end
+
+  def home
+  end
+
+  def another
+    @else = params[:something]
+  end
 end
