@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :genres
+  resources :books
+  resources :authors
   namespace :admin do
     get 'dashboard/main'
     get 'dashboard/user'
@@ -22,7 +25,7 @@ Rails.application.routes.draw do
 
   get 'query/:something', to: 'pages#another'
 
-  root to: 'pages#home'
+  root to: 'books#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

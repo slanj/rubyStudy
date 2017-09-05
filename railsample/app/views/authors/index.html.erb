@@ -1,0 +1,24 @@
+<h2>Authors</h2>
+
+<p id="notice"><%= notice %></p>
+
+<hr>
+
+<div>
+  <% @authors.each do |author| %>
+    <div class="content">
+
+      <p><%= author.name %></p>
+
+      <p><%= author.country %></p>
+
+      <p><%= link_to 'Show', author %></p>
+      <p><%= link_to 'Edit', edit_author_path(author) %></p>
+      <p><%= link_to 'Delete', author, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    </div>
+  <% end %>
+</div>
+
+<br>
+
+<%= link_to 'Create a New Author', new_author_path %>

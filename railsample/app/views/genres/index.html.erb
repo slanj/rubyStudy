@@ -1,0 +1,22 @@
+<h2>Genres</h2>
+
+<p id="notice"><%= notice %></p>
+
+<hr>
+
+<div>
+  <% @genres.each do |genre| %>
+    <div class="content">
+
+      <p><%= genre.name %></p>
+
+      <p><%= link_to 'Show', genre %></p>
+      <p><%= link_to 'Edit', edit_genre_path(genre) %></p>
+      <p><%= link_to 'Delete', genre, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    </div>
+  <% end %>
+</div>
+
+<br>
+
+<%= link_to 'Create a New Genre', new_genre_path %>
