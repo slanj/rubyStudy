@@ -7,18 +7,19 @@ story.apply(:chunk, :segment, :tokenize, :category)
 puts 'Paragraps in document: ' + story.paragraphs.count.to_s
 
 brain_words = story.words.select { |word| word.to_s == "scientists" }
-puts 'Brain in document before stemming: ' + brain_words.count.to_s
+puts 'Brain in document: ' + brain_words.count.to_s
 
+puts "\nFirst paragraph \n"
 puts story.paragraphs[0].to_s
 
-puts "\nPrint all normalized words \n"
+
 inf_words = story.words.map do |word| 
     if word.category == "noun"
         word = word.singular.downcase
     elsif word.category == "verb"
         word = word.present_participle.downcase
     else
-        word = word.to_s
+        word = word.to_s.downcase
     end
 end
 
